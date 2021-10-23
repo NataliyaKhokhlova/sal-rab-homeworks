@@ -34,22 +34,21 @@
 // }
 
 function sendRequest(data) {
-    let data = {client: {name, phone},order: {address, sum}, goods: []};
-    let address = {street, house, entrance, floor, flat};
-    let goods = [title, count];
-
-    data.client.name = 'Иван';
-    data.client.phone = '+7(987)65-43-210';
-    data.address.street = 'ул. Ленина';
-    data.address.house = 'дом 2';
-    data.address.entrance = '4 подъезд';
-    data.address.floor = '5 этаж';
-    data.address.flat = 'кв 53';
-    data.goods.title = 'Пицца';
-    data.goods.count = 2; 
-
+    let data = {client: {name, phone}, order: {address, sum}, goods: []};
+    let address = street + ' ,' + house + ' ,' + entrance + ' ,' + floor + ' ,' + flat;
+    let goods = [title, count]; 
     let jsonData = JSON.stringify({data});
 }
     return jsonData;
+
+    let name = 'Иван';
+    let phone = '+7(987)65-43-210';
+    let street = 'ул. Ленина';
+    let house = 'дом 2';
+    let entrance = '4 подъезд';
+    let floor = '5 этаж';
+    let flat = 'кв 53';
+    let title = 'Пицца';
+    let count = 2;
     console.log(sendRequest());
 
